@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; 
+    background-color: #f4f7f6; 
+    margin: 0;
+    
+}
+.main-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: white;
+    border-bottom: 1px solid #d1d5db;
+    box-shadow: rgba(7, 7, 7, 0.216) 0 10px 20px;}
+
+.hometitle {
+   display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    color: rgb(16, 76, 159);
+    
+}
+.homeNav{
+    background: none;
+    border: 1px solid #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6b7280;
+    border-radius: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+.homeNav:hover {
+    background-color: #f3f4f6;
+    color: #104c9f;
+    border-color: #104c9f;
+}
+
+.hometitle img {
+    width: 40px;
+    
+}
+
+
+.portal-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-bottom: 80px;
+    text-align: center;
+    width: 100%; 
+    
+}
+
+h1 {
+    color: #153d74;
+    border-bottom: 3px solid#153d74; 
+    
+}
+
+.cardwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%; 
+    max-width: 350px; 
+    min-height: 400px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(7, 7, 7, 0.216) 0 10px 20px;
+    border-radius: 15px; 
+}
+
+.cards img {
+    width: auto;
+    height: 60px;
+    margin-bottom: 30px; 
+}
+
+.portalname {
+    color: #104c9f;
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.cards p {
+    color: #64748B;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+.cards a {
+    display: inline-block;
+    margin-top: auto; 
+    background-color: rgb(14, 59, 158);
+    color: white;
+    text-decoration: none;
+    padding: 10px; 
+    border-radius: 9px;
+    width: 70%;
+    transition: 0.3s;
+}
+
+.cards a:hover {
+    background-color: rgba(14, 60, 158, 0.779);
+}
+
+.mainfooter {
+    background-color: #f4f7f6;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+.footerline {
+    border: 0;
+    border-top: 1px solid #d1d5db;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer a {
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #173B9C;
+}
+
+.copyright {
+    color: #6b7280;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+}
+.hide{
+    display: none !important;
+}
+.student-dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #153d74;
+}
+    .dashboard-card{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 92%;
+        max-width: 600px;
+        padding: 20px;
+        align-items: center;
+        margin: 20px auto;
+        border-radius: 15px;
+    box-shadow: rgba(7, 7, 7, 0.216) 0 10px 20px;
+
+
+
+    }
+    .dashboard-card h2 {
+    color: rgb(16, 76, 159);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    }
+    .studentNav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e5e7eb;
+}
+.navBtn {
+    flex: 1 ;
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    font-size: 14px; 
+    font-weight: bold;
+    color: #64748B;
+    cursor: pointer;
+    transition: 0.3s;
+    border-bottom: 3px solid transparent;
+}
+.navBtn:hover { color: #104c9f; }
+.activeBtn {
+    color: #104c9f;
+    border-bottom: 3px solid #104c9f; 
+}
+.inputGroup{
+display: flex;
+flex-direction: column;
+margin-bottom: 15px;
+}
+.inputGroup label { 
+    font-weight: bold; 
+    color: #4b5563; 
+    margin-bottom: 6px; 
+    font-size: 13px; 
+}
+.inputGroup input, 
+.inputGroup select, 
+.inputGroup textarea {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-family: inherit; 
+    font-size: 14px;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+.inputGroup input:focus, 
+.inputGroup select:focus, 
+.inputGroup textarea:focus {
+    outline: none;
+    border-color: #104c9f; 
+}
+
+.btnGroup {
+    display: flex;
+    flex-direction: column-reverse; 
+    gap: 12px;
+    margin-top: 25px;
+}
+.primary-btn, .secondary-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    width: 100%; 
+    text-align: center;
+}
+.primary-btn { background-color: rgb(14, 59, 158); color: white; }
+.primary-btn:hover { background-color: rgba(14, 60, 158, 0.779); }
+.secondary-btn { background-color: #e5e7eb; color: #4b5563; }
+.secondary-btn:hover { background-color: #d1d5db; }
+.raiseComplaintView{
+        min-width: 200px;
+    }
+    .loginCard {
+        width: 350px;
+        background-color: white;
+        padding: 40px;
+        border-radius: 20px;
+      box-shadow: rgba(7, 7, 7, 0.216) 0 10px 20px; 
+        margin-top: 50px;
+        
+
+        
+    }
+    .loginCard h1 {
+        text-align: center;
+    }
+    .loginCard p {
+        text-align: center;
+    }
+    .adminLoginPge{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.complaintTable{
+
+    width: 100%;
+    border-collapse:separate;
+    margin-top: 30px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    border-spacing: 0;
+}
+.complaintTable th{
+    padding: 12px 8px;
+    text-align: left;
+    background-color: #031280;
+    color: white;
+}
+.complaintTable td{
+    padding: 12px 8px;
+    text-align: left;
+    border-top: 1px solid #ddd;
+
+}
+.admin-dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+.adminCards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+.adminCard{
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    width: 150px;
+    text-align: center;
+    padding: 15 10px;
+    flex: 1 1 90px;
+    box-shadow: rgba(7, 7, 7, 0.1) 0 4px 6px;
+}
+
+.complaintTable button{
+    background:none;
+    border :1px solid rgb(14, 59, 158); 
+    color : rgb(14, 59, 158); 
+    padding: 7%;
+    border-radius: 5px;;
+    transition: 10ms;
+}
+.complaintTable button:hover{
+    background:none;
+    border :1px solid rgb(14, 59, 158,50%); 
+    color : rgb(14, 59, 158 50%); 
+    padding: 7%;
+    border-radius: 5px;;
+}
+.complaintBox {
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(7, 7, 7, 0.1) 0 4px 6px;
+    overflow-x: auto; 
+    overflow-y: auto; 
+    
+}
+.complaintBox h3 {
+    color: rgb(14, 59, 158);
+    
+}
+.resolved{
+    color: rgb(23, 199, 23);
+}
+.pending{
+    color: rgb(234, 234, 34)
+}
+.totalComplaints{
+    color :rgb(14, 59, 158);
+
+}
+.logOut{ background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+  gap: 5px;
+}
+
+.logOut:hover {
+  background-color: #cc0000;
+}
+
+
+@media (min-width: 768px) {
+    .cardwrap {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+     .dashboard-card { padding: 30px; }
+    .dashboard-card h2 { font-size: 24px; }
+    .navBtn { font-size: 16px; padding: 12px; }
+    .btnGroup { 
+        flex-direction: row; 
+        justify-content:space-between;
+        
+    }
+    .primary-btn, .secondary-btn { 
+        flex: 1; 
+        width: auto; 
+    
+    }
+    .raiseComplaintView{
+        min-width: 500px;
+    }
+    .inputGroup{
+        margin-bottom: 30px;
+    }
+    .loginCard {
+       min-width: 650px;
+           
+    }
+
+
+    
+
+}
