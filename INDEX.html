@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Campus Support</title>
     <link rel="stylesheet" href="app.css">
+    
 </head>
 <body>
     <header class="main-header">
           <div class="hometitle">
-        <img src="university-building_17167024.png" alt="university">
+        <img src="images/university-building_17167024.png" alt="university">
         <h2>CampusSupport</h2>
     </div>
     <button class="homeNav back-btn"> &#8962; Home</button>
@@ -21,7 +22,7 @@
            <h1 class="midHead">Campus Support Portal</h1>
 <div class="cardwrap ">
      <div class="cards">
-                <img src="graduated_4537020.png" alt="Student Icon">
+                <img src="images/graduated_4537020.png" alt="Student Icon">
                 <h3 class="portalname">Student Portal</h3>
                 <p>Raise a complaint and check status of your previous requests.</p>
                 <a href="#" id="accessPortal">Access Portal</a>
@@ -30,7 +31,7 @@
             </div>
             
              <div class="cards">
-                <img src="customer_1688401.png" alt="Admin Icon">
+                <img src="images/customer_1688401.png" alt="Admin Icon">
                 <h3 class="portalname">Admin Panel</h3>
                 <p>Check complaints and update status</p>
                 <a href="#" id="accessAdmin">Login to Dashboard</a>
@@ -43,7 +44,7 @@
         <section class="student-dashboard hide" id="student-dashboard">
             <h1>Student Dashboard</h1>
             <div class="dashboard-card">
-                 <div class = studentNav>
+                 <div class="studentNav">
             <button class="navBtn activeBtn">Raise complaint</button>
             <button class="navBtn">My complaints</button> 
                  </div>
@@ -77,19 +78,11 @@
     <h2>
         My Complaints
     </h2>
-    <div class="inputGroup" >
+    <div class= "searchGroup" >
         <input type="text" id="searchStudentId" placeholder="Enter your Student ID...">
-        <button id="searchBtn" class="primary-btn">View My Status</button>
+        <button id="searchBtn" class="searchBtn">View My Status</button>
     </div>
     <table class="complaintTable" id ="studentComplaintsList">
-        <thead>
-              <tr>
-            <th>Tracking No.</th>
-            <th>Complaint Title</th>  
-            <th>Date</th>
-            <th>Status</th>
-        </tr>
-    </thead>
       <tbody>
 
       </tbody>
@@ -116,15 +109,15 @@
             <h1>Admin Login</h1>
             <p>please sign in to access the admin portal</p>
 
-        <form >
+        <form id="loginForm">
             <div class="inputGroup">
                 <label for="adminId">Admin ID</label>
                 <input type="text" name="adminId" id="adminId" placeholder="Enter Admin Id" required>
             </div>
             <div class="inputGroup">
                 <label for="adminPass">Password</label>
-                <input type="password"
-                id="adminPass" name="adminPass" placeholder="Password" required>
+                <input type="password" id="adminPass" name="adminPass" placeholder="Password" required>
+                <span id="togglePassword" style="cursor: pointer;">👁️</span>
             </div>
             <div class="btnGroup" >
                 <button type="submit" class="primary-btn loginBtn">Login</button>
@@ -137,17 +130,17 @@
         <h1>Admin Dashboard</h1>
         <div class="adminCards"> 
             <div class="adminCard totalComplaints"> 
-                <h2>12</h2>
+                <h2 id="total">0</h2>
                 <p>Total complaints</p>
             
             </div>
              <div class ="adminCard pending"> 
-                <h2>12</h2>
+                <h2 id="pending">0</h2>
                 <p>pending</p>
             
             </div>
              <div class="adminCard resolved"> 
-                <h2>12</h2>
+                <h2 id="resolved">0</h2>
                 <p>resolved</p>
             
             </div>
@@ -155,45 +148,36 @@
         <div class="complaintBox">
             <h3>All Complaints</h3>
             <table class="complaintTable" id="adminComplaintsList">
-                <tr>
-                    <th>Tracking No.</th>
-                    <th>student Id</th>
-                    <th>Complaint Title</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-<tr>
-            <td>#16</td>
-            <td>Smk2021</td>
-            <td>WiFi not working</td>
-            <td>15/05/26</td>
-            <td>Pending</td>
-            <td> <button>view</button></td>
-        </tr>
-        <tr>
-            <td> #21 </td>
-            <td>smk2022</td>
-            <td>Class rooms Fan not Working</td>
-            <td>15/05/26</td>
-            <td>resolved</td>
-            <td> <button>view</button></td>
-        </tr>
-        <tr>
-            <td>#24</td>
-            <td>smk2043</td>
-            <td>Syllabus not completed</td>
-            <td>15/05/26</td>
-            <td>rejected</td>
-            <td> <button >view</button></td>
-        </tr>
-            </table>
+                <tbody> 
+
+                </tbody>
+                </table>
         </div>
         <div class="btnGroup"> 
             <button class="secondary-btn back-btn">Back to Home</button>  
             <button class="logOut">Log Out</button>
         </div>
           
+    </div>
+
+    <div class="complaintDetailModal hide" id="complaintDetailModal">
+        <div class="modalContent">
+            <span class="closeModal">&times;</span>
+            <h2>Complaint Details</h2>
+            <div class="detailsBox">
+                <p><strong>Tracking No:</strong> <span id="detailTrackingNo"></span></p>
+                <p><strong>Student ID:</strong> <span id="detailStudentId"></span></p>
+                <p><strong>Title:</strong> <span id="detailTitle"></span></p>
+                <p><strong>Description:</strong> <span id="detailDescription"></span></p>
+                <p><strong>Date:</strong> <span id="detailDate"></span></p>
+                <p><strong>Status:</strong> <span id="detailStatus"></span></p>
+            </div>
+            <div class="actionButtonGroup">
+                <button class="resolveBtn primary-btn">Resolve</button>
+                <button class="rejectBtn secondary-btn">Reject</button>
+                <button class="cancelBtn secondary-btn">Cancel</button>
+            </div>
+        </div>
     </div>
 
     </section>
