@@ -50,10 +50,10 @@
          <div class="raiseComplaintView " id="raiseComplaintView">
             <h2>Raise a New Complaint</h2>
 
-            <form >
+            <form  id="complaintForm">
                 <div class="inputGroup"> 
                     <label for="studentId">Student Id </label>
-                 <input type="text" placeholder="Enter Student Id" name="studentId" id="student-id" required>
+                 <input type="text" placeholder="Enter Student Id" name="studentId" id="studentId" required>
                </div>
                <div class ="inputGroup">
                     <label for="issueSubject">Complaint Title</label>
@@ -77,30 +77,23 @@
     <h2>
         My Complaints
     </h2>
-    <table class="complaintTable">
-        <tr>
+    <div class="inputGroup" >
+        <input type="text" id="searchStudentId" placeholder="Enter your Student ID...">
+        <button id="searchBtn" class="primary-btn">View My Status</button>
+    </div>
+    <table class="complaintTable" id ="studentComplaintsList">
+        <thead>
+              <tr>
             <th>Tracking No.</th>
             <th>Complaint Title</th>  
+            <th>Date</th>
             <th>Status</th>
         </tr>
-        <tr>
-            <td>#16</td>
-            <td>WiFi not working</td>
-            <td>Pending</td>
-        </tr>
-        <tr>
-            <td>
-                #21
-            </td>
-            <td>Class rooms Fan not Working</td>
-            <td>resolved</td>
-        </tr>
-        <tr>
-            <td>#24</td>
-            <td>Syllabus not completed</td>
-            <td>rejected</td>
+    </thead>
+      <tbody>
 
-        </tr>
+      </tbody>
+        
     </table>
     <div class="btnGroup">
          <button class="secondary-btn back-btn">Back to Home</button>
@@ -161,7 +154,7 @@
         </div>
         <div class="complaintBox">
             <h3>All Complaints</h3>
-            <table class="complaintTable">
+            <table class="complaintTable" id="adminComplaintsList">
                 <tr>
                     <th>Tracking No.</th>
                     <th>student Id</th>
